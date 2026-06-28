@@ -9,11 +9,10 @@ app.use('/estudiantes', estudianteRoutes);
 
 const PORT = 3001;
 
-// Inicializar BD y luego arrancar servidor
 Estudiante.init()
     .then(() => {
-        app.listen(PORT, () => console.log(`🚀 Microservicio Estudiantes corriendo en puerto ${PORT}`));
+        app.listen(PORT, () => console.log(`Microservicio Estudiantes corriendo en puerto ${PORT}`));
     })
-    .catch(err => console.error("❌ Error de inicialización:", err));
+    .catch(err => console.error("Error de inicialización:", err));
 
 module.exports = app;

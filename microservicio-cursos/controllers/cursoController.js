@@ -10,9 +10,9 @@ exports.consultar = async (req, res) => {
     try { const r = await Curso.obtener(req.params.id); r ? res.json(r) : res.status(404).json({ mensaje: "Curso no encontrado" }); } catch (e) { res.status(500).json({ error: e.message }); }
 };
 exports.actualizar = async (req, res) => {
-    try { await Curso.actualizar(req.params.id, req.body); res.json({ mensaje: "Curso actualizado con éxito" }); } catch (e) { res.status(500).json({ error: e.message }); }
+    try { await Curso.actualizar(req.params.id, req.body); res.json({ mensaje: "Curso actualizado" }); } catch (e) { res.status(500).json({ error: e.message }); }
 };
 exports.eliminar = async (req, res) => {
-    try { await Curso.eliminar(req.params.id); res.json({ mensaje: "Curso eliminado con éxito" }); } catch (e) { res.status(500).json({ error: e.message }); }
+    try { await Curso.eliminar(req.params.id); res.json({ mensaje: "Curso eliminado" }); } catch (e) { res.status(500).json({ error: e.message }); }
 };
 

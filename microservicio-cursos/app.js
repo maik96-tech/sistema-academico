@@ -11,8 +11,8 @@ const PORT = 3002;
 
 Curso.init()
     .then(() => {
-        app.listen(PORT, () => console.log(`🚀 Microservicio Cursos corriendo en puerto ${PORT}`));
+        app.listen(PORT, () => console.log(`Microservicio Cursos corriendo en puerto ${PORT}`));
     })
-    .catch(err => console.error("❌ Error de inicialización:", err));
+    .catch(err => console.error("Error de inicialización:", err));
 
 module.exports = app;

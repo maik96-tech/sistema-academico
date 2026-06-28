@@ -1,10 +1,6 @@
 CREATE DATABASE IF NOT EXISTS sistema_academico;
 USE sistema_academico;
 
--- =========================================================================
--- TABLAS CORREGIDAS SEGÚN ENUNCIADO
--- =========================================================================
-
 CREATE TABLE IF NOT EXISTS estudiantes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     codigo VARCHAR(20) UNIQUE NOT NULL,
@@ -22,9 +18,6 @@ CREATE TABLE IF NOT EXISTS cursos (
     docente VARCHAR(100) NOT NULL
 );
 
--- =========================================================================
--- PROCEDIMIENTOS ALMACENADOS (ESTUDIANTES)
--- =========================================================================
 DELIMITER //
 
 CREATE PROCEDURE sp_crear_estudiante(IN p_codigo VARCHAR(20), IN p_nombres VARCHAR(100), IN p_apellidos VARCHAR(100), IN p_correo VARCHAR(100), IN p_carrera VARCHAR(100))
